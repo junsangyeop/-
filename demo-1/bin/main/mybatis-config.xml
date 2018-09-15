@@ -19,11 +19,13 @@
     
     <typeAliases>
         <typeAlias alias="LandNewsBean" type="com.example.demo.bean.LandNewsBean"/>
+        <typeAlias alias="HouseMgrUserBean" type="com.example.demo.bean.HouseMgrUserBean"/>
     </typeAliases>
  
     <!-- MyBatis mapper 파일이 추가될 때마다 지정해줘야 . -->
     <mappers>
         <mapper resource="mapper/LandNews.xml"/>
+        <mapper resource="mapper/HouseMgr.xml"/>
     </mappers>
     
 </configuration>
