@@ -6,7 +6,8 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.bean.HouseMgrUserBean;
@@ -46,19 +47,12 @@ public class TestController {
 		
 	}
 	
-	@GetMapping("/loginTest")
-	public HashMap<String, Boolean> loginTest(@RequestParam("id") String email
-			, @RequestParam("passwd") String passwd) {
-		
+	@PostMapping("/loginTest")
+	public HashMap<String, Boolean> loginTest(@RequestBody HouseMgrUserBean houseMgrUserBean) {
+			
 		HashMap<String, Boolean> result = new HashMap<String, Boolean>();
 		
-		HouseMgrUserBean houseMgrUserBean = new HouseMgrUserBean();
-		houseMgrUserBean.setEmail(email);
-		houseMgrUserBean.setPasswd(passwd);
-		
 		result.put("results", houseMgrDao.selectHouseMgrUserCheck(houseMgrUserBean));
-		
-		System.out.println("result : " + result.get("results"));
 		
 		return result;
 	}
