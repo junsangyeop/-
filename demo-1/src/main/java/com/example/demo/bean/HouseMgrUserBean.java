@@ -7,7 +7,9 @@ public class HouseMgrUserBean {
 	private String name;
 	private String phone_number;
 	private String birthday;
+	private String address;
 	private String create_date;
+	
 	public String getEmail() {
 		return email;
 	}
@@ -43,6 +45,12 @@ public class HouseMgrUserBean {
 	}
 	public void setCreate_date(String create_date) {
 		this.create_date = create_date;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	

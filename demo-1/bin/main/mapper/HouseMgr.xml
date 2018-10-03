@@ -9,4 +9,9 @@
     	WHERE EMAIL = #{email}
     		AND PASSWD = #{passwd}
     </select>
+    
+    <insert id="insertUser" parameterType="com.example.demo.bean.HouseMgrUserBean">
+    	INSERT INTO LRMGR_USER (EMAIL, PASSWD, NAME, PHONE_NUMBER, BIRTHDAY, ADDRESS, CREATE_DATE)
+    	VALUES (#{email}, #{passwd}, #{name}, #{phone_number}, #{birthday}, #{address}, NOW())
+    </insert>
 </mapper>

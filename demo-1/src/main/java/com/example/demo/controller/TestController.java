@@ -57,4 +57,17 @@ public class TestController {
 		return result;
 	}
 	
+	@PostMapping("/userRegistTest")
+	public HashMap<String, Boolean> userRegistTest(@RequestBody HouseMgrUserBean houseMgrUserBean) {
+			
+		HashMap<String, Boolean> result = new HashMap<String, Boolean>();
+		
+		result.put("results", houseMgrDao.insertHouseMgrUser(houseMgrUserBean));
+		
+		return result;
+	}
+	
+	
+	
+	
 }

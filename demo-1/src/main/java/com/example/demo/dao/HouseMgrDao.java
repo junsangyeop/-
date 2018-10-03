@@ -1,5 +1,7 @@
 package com.example.demo.dao;
 
+import java.util.HashMap;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -18,4 +20,13 @@ public class HouseMgrDao {
 		
 		return this.sqlSession.selectOne("selectHouseMgrUserCheck", info);
 	}
+	
+	public Boolean  insertHouseMgrUser(HouseMgrUserBean info){
+		
+		int n = sqlSession.insert("insertUser", info);
+		
+		return (n > 0)?true:false;
+	}
+	
+	
 }
