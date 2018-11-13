@@ -3,7 +3,7 @@
 웹에서 실시간으로 이미지 분석 결과가 표시될 수 있도록 구현
 
 
-##시스템 구성
+## 시스템 구성
 
 ![ex_screenshot](./cifar-test/image/architecture.png)
 
@@ -20,7 +20,7 @@
 **CIFAR-10 데이터셋의 구성** 
 
 
-##1. RealtimeImageRecognition 디렉토리 => 웹 서버
+## 1. RealtimeImageRecognition 디렉토리 => 웹 서버
 
 ```sh
 개발 환경 : spring framework, gradle, spring boot
@@ -28,9 +28,9 @@
 기능 : 파일 업로드, 업로드된 파일 이름을 분석 서버에 전송
 ```
 
-##2. cifar-test 디렉토리 => 분석 서버
+## 2. cifar-test 디렉토리 => 분석 서버
 
-###이미지 분석 소스 코드
+### 이미지 분석 소스 코드
 https://github.com/exelban/tensorflow-cifar-10 => 소스코드 사용
 
 ```sh
@@ -39,7 +39,7 @@ https://github.com/exelban/tensorflow-cifar-10 => 소스코드 사용
 기능 : 소켓 서버, training, predict 
 ```
 
-###파일 설명
+### 파일 설명
 
 ```sh
 train.py
